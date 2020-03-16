@@ -5,11 +5,7 @@ services:
     build:
       context: .
       dockerfile: container-build/web/Dockerfile
-    environment:
-    - MYSQL_DATABASE=homestead
-    - MYSQL_USER=homestead
-    - MYSQL_PASSWORD=secret
-    - MYSQL_HOST=db
+    container_name: my-laravel-server
     ports:
     - "8080:80"
     volumes:
@@ -20,8 +16,14 @@ services:
   db:
     image: mysql:5.7
     environment:
+    - MYSQL_HOST=db
     - MYSQL_ROOT_PASSWORD=secret
     - MYSQL_USER=homestead
     - MYSQL_PASSWORD=secret
     - MYSQL_DATABASE=homestead
+    volumes:
+      - mysql_data: /var/lib/mysql
+  
+  volumes:
+    mysql_data: {driver: local}
 
