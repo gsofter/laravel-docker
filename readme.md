@@ -8,9 +8,9 @@ git clone https://github.com/guru2921/laravel-docker.git
 ```
 
 ### 2. Set up Docker environment
-
+```
 docker-compose up
-
+```
 Confirm that you have configured the docker-compose.yml and Dockerfile correctly.
 
 ### 3. Install the extended package dependency.
