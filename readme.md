@@ -13,6 +13,15 @@ docker-compose up
 ```
 Confirm that you have configured the docker-compose.yml and Dockerfile correctly.
 
+### 3. Setup Laravel Environment
+
+copy .env.example to .env
+
+change DB_HOST
+```
+DB_HOST=db
+```
+
 ### 3. Install the extended package dependency.
 
 Install the `Laravel` extended repositories: 
